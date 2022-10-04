@@ -1,13 +1,13 @@
-from cProfile import label
 from tkinter import *
-from turtle import bgcolor, title
-from unicodedata import name
 root = Tk()
 root.title("Registration Form")
 root.geometry("500x300")
 
 Label(root, text="Python Programming Registration Form", font="arial 15 bold").grid(row=0, column=3)
 
+def getvals():
+    print("accepted")
+    
 
 name=Label(root,text="Name")
 phone=Label(root,text="Phone")
@@ -43,4 +43,10 @@ emergencyentry.grid(row=5,column=3)
 
 checkbtn=Checkbutton(text="remember me ?", variable=checkvalue)
 checkbtn.grid(row=6,column=3)
+
+
+
+Button(text="submit",command=getvals).grid(row=7, column=3)
+
+
 root.mainloop()
